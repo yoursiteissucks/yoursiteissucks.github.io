@@ -2,7 +2,7 @@
 
 # You Site Is Sucks.
 
-[Source Code](https://github.com/nixsiow/yoursiteissucks) | [Home Page](http://yoursiteissucks.nixsiow.com) | [@nixsiow](http://twitter.com/nixsiow)
+[Source Code](https://github.com/yoursiteissucks/yoursiteissucks.github.io) | [Home Page](http://yoursiteissucks.github.io) | Built by [@nixsiow](http://twitter.com/nixsiow)
 
 
 ## Features
@@ -31,7 +31,7 @@
 
 Contributing
 ---
-Fork it ( https://github.com/ascendbruce/awesome_rails_console/fork )
+Fork it ( https://github.com/yoursiteissucks/yoursiteissucks.github.io )
 Create your feature branch (git checkout -b my-new-feature)
 Commit your changes (git commit -am 'Add some feature')
 Push to the branch (git push origin my-new-feature)
