@@ -7,7 +7,7 @@ angular.module('MyApp')
     $scope.websiteInput = 'http://';
 
     // change brand name by timer
-    var brandArray = ['SHIT', 'SlOW', 'SUCKS'];
+    var brandArray = ['SHIT', 'SLOW', 'SUCKS'];
     var counter = 0;
     var elem = $('#brandChange')[0];
     setInterval(brandChange, 1000);
