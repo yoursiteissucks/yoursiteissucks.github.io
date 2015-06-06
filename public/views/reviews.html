@@ -1,5 +1,5 @@
 <h1 class="lead">Other people also say</h1>
-<input class="search-box" type="text" name="searchReview" placeholder=" Search by keyword ... ↵ " autocomplete="off">
+<input class="search-box" type="text" name="searchReview" placeholder=" (Not working yet) Search by keyword ...  ↵ " autocomplete="off" disabled="on">
 
 <!-- Custom toArray filter because angular filter doesnt work on Object -->
 <div class="card" ng-repeat="review in reviews | findAndToArray:'complainInput' | orderBy: 'reviewDate':true">
