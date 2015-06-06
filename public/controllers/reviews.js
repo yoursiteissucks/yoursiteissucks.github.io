@@ -1,5 +1,6 @@
 angular.module('MyApp')
   .controller('ReviewsCtrl', ['$scope', 'reviewService', function($scope, reviewService) {
+    // console.log(reviewService.getReviews());
     $scope.reviews = reviewService.getReviews();
 
     //Check to see if the window is top if not then display button

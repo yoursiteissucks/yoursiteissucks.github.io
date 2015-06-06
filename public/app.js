@@ -1,4 +1,4 @@
-angular.module('MyApp', ['ngRoute', 'firebase', 'MyApp.services'])
+angular.module('MyApp', ['ngRoute', 'firebase', 'MyApp.services', 'MyApp.filters'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {

@@ -1,7 +1,8 @@
 <h1 class="lead">Other people also say</h1>
 <input class="search-box" type="text" name="searchReview" placeholder=" Search by keyword ... ↵ " autocomplete="off">
 
-<div class="card" ng-repeat="review in reviews">
+<!-- Custom toArray filter because angular filter doesnt work on Object -->
+<div class="card" ng-repeat="review in reviews | findAndToArray:'complainInput' | orderBy: 'reviewDate':true">
   <div class="card-content">
     <h1>{{ review.websiteInput }}</h1>
     <h2 class="lead">{{ review.complainInput }}</h2>
