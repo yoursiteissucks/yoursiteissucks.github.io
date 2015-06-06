@@ -1,12 +1,12 @@
 <h1 class="lead">Other people also say</h1>
-<input class="search-box" type="text" name="searchReview" placeholder=" (Not working yet) Search by keyword ...  ↵ " autocomplete="off" disabled="on">
+<input class="search-box" type="text" name="searchReview" placeholder="( Coming soon ) Search ...  ↵ " autocomplete="off" disabled="on">
 
 <!-- Custom toArray filter because angular filter doesnt work on Object -->
 <div class="card" ng-repeat="review in reviews | findAndToArray:'complainInput' | orderBy: 'reviewDate':true">
   <div class="card-content">
-    <h1>{{ review.websiteInput }}</h1>
+    <h2>{{ review.websiteInput }}</h2>
     <hr class="style">
-    <h2 class="lead">{{ review.complainInput }}</h2>
+    <h3 class="lead">{{ review.complainInput }}</h3>
   </div>
 
   <div class="social-share">
@@ -20,6 +20,8 @@
     </div>
   </div>
 </div>
+<br>
+<br>
 
 <!-- to Top's button live here -->
 <div id="scrollToTop">

@@ -313,8 +313,7 @@ hr.style {
   border: 1px solid #fff;
   padding: 8px 20px;
   border-radius: 10px;
-  margin: 15px auto;
-  font-size: 11px;
+  margin: 20px auto;
   /* cursor: pointer; */
 }
 @media (min-width: 700px) {
@@ -329,6 +328,11 @@ hr.style {
 .card-content {
   width: 99%;
   display: inline-block;
+}
+@media (max-width: 700px) {
+  .card-content h2 {
+    font-size: 20px;
+  }
 }
 
 .social-share {
