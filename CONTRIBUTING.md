@@ -1,6 +1,6 @@
-# Contributing to HTML5 Boilerplate
+# Contributing to Your Site Is Sucks
 
-♥ [HTML5 Boilerplate](http://html5boilerplate.com) and want to get involved?
+♥ [Your Site Is Sucks](http://yoursiteissucks.github.io) and want to get involved?
 Thanks! There are plenty of ways you can help!
 
 Please take a moment to review this document in order to make the contribution
@@ -14,24 +14,24 @@ patches and features.
 
 ## Using the issue tracker
 
-The [issue tracker](https://github.com/h5bp/html5-boilerplate/issues) is
+The [issue tracker](https://github.com/yoursiteissucks/yoursiteissucks.github.io/issues) is
 the preferred channel for [bug reports](#bugs), [features requests](#features)
 and [submitting pull requests](#pull-requests), but please respect the following
 restrictions:
 
-* Please **do not** use the issue tracker for personal support requests (use
+<!-- * Please **do not** use the issue tracker for personal support requests (use
   [Stack Overflow](http://stackoverflow.com/questions/tagged/html5boilerplate)
-  or IRC).
+  or IRC). -->
 
 * Please **do not** derail or troll issues. Keep the discussion on topic and
   respect the opinions of others.
 
-* Please **do not** open issues or pull requests regarding the code in
+<!-- * Please **do not** open issues or pull requests regarding the code in
   [`.htaccess`](https://github.com/h5bp/server-configs-apache),
   [`jQuery`](https://github.com/jquery/jquery/),
   [`Modernizr`](https://github.com/Modernizr/Modernizr) or
   [`Normalize.css`](https://github.com/necolas/normalize.css) (open them in
-  their respective repositories).
+  their respective repositories). -->
 
 
 <a name="bugs"></a>
@@ -112,7 +112,7 @@ included in the project:
    # Navigate to the newly cloned directory
    cd html5-boilerplate
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/h5bp/html5-boilerplate.git
+   git remote add upstream https://github.com/yoursiteissucks/yoursiteissucks.github.io.git
    ```
 
 2. If you cloned a while ago, get the latest changes from upstream:
