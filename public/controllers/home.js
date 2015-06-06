@@ -1,5 +1,5 @@
 angular.module('MyApp')
-  .controller('HomeCtrl', ['$scope', 'addReviewService', function($scope, addReviewService) {
+  .controller('HomeCtrl', ['$scope', 'reviewService', function($scope, reviewService) {
     // jQuery to manually focus input if html5 autofocus tag not working properly
     var websiteInput = $('input[name="websiteInput"]');
     websiteInput.focus();
@@ -42,7 +42,7 @@ angular.module('MyApp')
     $scope.review = {websiteInput: 'http://', complainInput: '', upvote: 0};
 
     $scope.add = function() {
-      addReviewService.addReview($scope.review);
+      reviewService.addReview($scope.review);
     };
 
 

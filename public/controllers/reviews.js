@@ -1,40 +1,36 @@
 angular.module('MyApp')
-  .controller('ReviewsCtrl', ['$scope', function($scope) {
+  .controller('ReviewsCtrl', ['$scope', 'reviewService', function($scope, reviewService) {
+    $scope.reviews = reviewService.getReviews();
 
-      // ------------------------
-      // For Jump to Top button
-      // ------------------------
-      //Check to see if the window is top if not then display button
-      var toTopButton = $('#scrollToTop');
-      var mobileToTopButton = $('#mobile-scrollToTop');
+    //Check to see if the window is top if not then display button
+    var toTopButton = $('#scrollToTop');
+    var mobileToTopButton = $('#mobile-scrollToTop');
 
-      // hide both mobile or desktop version immediately at first load
-      toTopButton.hide();
-      mobileToTopButton.hide();
+    // hide both mobile or desktop version immediately at first load
+    toTopButton.hide();
+    mobileToTopButton.hide();
 
-      // Check the scrollTop and check the width to show diff button
-      $(window).scroll(function() {
-        if ($(this).scrollTop() > 130) {
-          if ($(this).width() > 700) {
-            toTopButton.fadeIn();
-          } else {
-            mobileToTopButton.fadeIn();
-          }
+    // Check the scrollTop and check the width to show diff button
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 130) {
+        if ($(this).width() > 700) {
+          toTopButton.fadeIn();
         } else {
-          toTopButton.hide();
-          mobileToTopButton.hide();
+          mobileToTopButton.fadeIn();
         }
-      });
+      } else {
+        toTopButton.hide();
+        mobileToTopButton.hide();
+      }
+    });
 
-      // Click event to both toTop buttons
-      // $('.class1').add('.class2').click(some_function);
-      toTopButton.add(mobileToTopButton).click(function() {
-        $('html, body').animate({
-          scrollTop: 0
-        }, 800);
-        return false;
-      });
-
-
+    // Click event to both toTop buttons
+    // $('.class1').add('.class2').click(some_function);
+    toTopButton.add(mobileToTopButton).click(function() {
+      $('html, body').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
+    });
 
   }]);

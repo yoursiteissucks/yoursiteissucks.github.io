@@ -9,10 +9,10 @@ angular.module('MyApp', ['ngRoute', 'firebase', 'MyApp.services'])
         templateUrl: 'public/views/about.html',
         controller: ''
       })
-      .when('/reviews/:id', {
-        templateUrl: 'public/views/detail.html',
-        controller: ''
-      })
+      // .when('/reviews/:id', {
+      //   templateUrl: 'public/views/detail.html',
+      //   controller: ''
+      // })
       .when('/reviews', {
         templateUrl: 'public/views/reviews.html',
         controller: 'ReviewsCtrl'
@@ -24,10 +24,6 @@ angular.module('MyApp', ['ngRoute', 'firebase', 'MyApp.services'])
       .when('/signup', {
         templateUrl: 'public/views/signup.html',
         controller: 'AuthCtrl'
-      })
-      .when('/add', {
-        templateUrl: 'public/views/add.html',
-        controller: 'AddCtrl'
       })
       .otherwise({
         redirectTo: '/'
