@@ -5,14 +5,15 @@
 <div class="card" ng-repeat="review in reviews | findAndToArray:'complainInput' | orderBy: 'reviewDate':true">
   <div class="card-content">
     <h1>{{ review.websiteInput }}</h1>
+    <hr class="style">
     <h2 class="lead">{{ review.complainInput }}</h2>
   </div>
 
   <div class="social-share">
-    <li><a href="http://twitter.com/nixsiow" target="_blank"><i class="fa fa-twitter"></i></a></li>
-    <li><a href="http://plus.google.com/+nixsiow" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-    <li><a href="http://plus.google.com/+nixsiow" target="_blank"><i class="fa fa-tumblr"></i></a></li>
-    <li><a href="mailto:nixsiow@hotmail.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
+    <li><a href="http://twitter.com/intent/tweet?status=Your Site Is Sucks!+http://yoursiteissucks.github.io/ via @ysis_app" target="_blank"><i class="fa fa-twitter"></i></a></li>
+    <li><a href="https://plus.google.com/share?url=http://yoursiteissucks.github.io" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+    <li><a href="http://www.tumblr.com/share?v=3&u=http://yoursiteissucks.github.io&t=Your Site Is Sucks!" target="_blank"><i class="fa fa-tumblr"></i></a></li>
+    <li><a href="http://www.facebook.com/sharer/sharer.php?u=http://yoursiteissucks.github.io&title=Your Site Is SUCKS!" target="_blank"><i class="fa fa-facebook"></i></a></li>
 
     <div class="card-upvote pull-right">
       <a href="#"><i class="fa fa-chevron-up"> {{ review.upvote }}</i></a>

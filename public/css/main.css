@@ -313,12 +313,13 @@ hr.style {
   border: 1px solid #fff;
   padding: 8px 20px;
   border-radius: 10px;
-  margin: 10px auto;
-  cursor: pointer;
+  margin: 15px auto;
+  font-size: 11px;
+  /* cursor: pointer; */
 }
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   .card {
-    opacity: 0.6;
+    opacity: 0.5;
   }
   .card:hover {
     opacity: 1;
