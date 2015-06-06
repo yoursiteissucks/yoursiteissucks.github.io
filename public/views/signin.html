@@ -2,16 +2,16 @@
   <div class="form-wrapper">
     <form ng-submit='signin()' name="signinForm" novalidate>
       <h2 class="lead"><b>Sign in</b> &nbsp; &nbsp; &#215; &nbsp; &nbsp; <a href="#/signup">Sign up</a></h2>
-
+      <br>
       <!-- Email -->
       <div class="form-group"
       ng-class='{ "has-focus": signinForm.email.hasFocus,
       "has-success": signinForm.email.$valid,
       "has-error": signinForm.email.$invalid && (signinForm.$submitted || signinForm.email.$touched),
       "is-empty": !signinForm.email.$viewValue }'>
-        <input type="email" name="email" ng-model="email" placeholder=" example@example.com" autocomplete="off" required
+        <input type="email" name="email" ng-model="user.email" placeholder=" Email" autocomplete="off" required
         ng-focus='signinForm.email.hasFocus=true', ng-blur='signinForm.email.hasFocus=false' autofocus>
-        <p ng-show="signinForm.email.$error.required && (signinForm.email.$touched || submitted)"  class="error-block">Email is required!</p>
+        <p ng-show="signinForm.email.$error.required && (signinForm.email.$touched || submitted)"  class="error-block">Your email is required!</p>
         <p ng-show="signinForm.email.$error.email && (signinForm.email.$touched || submitted)"  class="error-block">Valid email is required!</p>
       </div>
       <br>
@@ -22,12 +22,12 @@
       "has-success": signinForm.password.$valid,
       "has-error": signinForm.password.$invalid && (signinForm.$submitted || signinForm.password.$touched),
       "is-empty": !signinForm.password.$viewValue }'>
-        <input type="password" name="password" ng-model="password" placeholder=" Password" required
+        <input type="password" name="password" ng-model="user.password" placeholder=" Password" required
         ng-focus='signinForm.password.hasFocus=true', ng-blur='signinForm.password.hasFocus=false'>
-        <p ng-show="signinForm.password.$error.required && (signinForm.password.$touched || submitted)"  class="error-block">Password is required!</p>
+        <p ng-show="signinForm.password.$error.required && (signinForm.password.$touched || submitted)"  class="error-block">Your password is required!</p>
         <!-- <p ng-show="signinForm.password.$error && (signinForm.password.$touched || submitted)"  class="error-block">Please try again!</p> -->
       </div>
-      <!-- <br> -->
+      <br>
 
       <button class="btn btn-lg btn-awesome" ng-disabled="signinForm.$invalid" type="submit">Sign in &#187;</button>
     </form>

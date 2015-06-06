@@ -1,17 +1,35 @@
 <div class="wrapper">
+
+  <br>
+  <a class="btn btn-lg btn-awesome" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+    Why should I sign up?
+  </a>
+  <div class="collapse" id="collapse1">
+    <div class="lead">
+      <p>Short answer is you shouldn't if you are here to just to complain. Head back to <a href="/" class="special_link">homepage</a> and express your unsatisfactory experience.</p>
+      <p>Feel lazy or wordless? No problem, go <a href="#/reviews" class="special_link">here</a> and see what people say about these websites.</p>
+      <i>Stay anonymous, no signup required!</i>
+      <hr class="style">
+      <p>If you are <i>webmaster</i> or <i>website owner</i> and you would like to get notify when unhappy customers complain about your website, sign up now! We'll sum it up and deliver to your mailbox!</p>
+      <p>(This function is still developing, but feel free to signup if you like. Cheers!)</p>
+
+    </div>
+  </div>
+
+  <br><br>
   <div class="form-wrapper">
     <form ng-submit='signup()' name="signupForm" novalidate>
       <h2 class="lead"><b>Sign up</b> &nbsp; &nbsp; &#215; &nbsp; &nbsp; <a href="#/signin">Sign in</a></h2>
       <!-- Username -->
-      <div class="form-group"
+      <!-- <div class="form-group"
       ng-class='{ "has-focus": signupForm.username.hasFocus,
       "has-success": signupForm.username.$valid,
       "has-error": signupForm.username.$invalid && (signupForm.$submitted || signupForm.username.$touched),
       "is-empty": !signupForm.username.$viewValue }'>
-        <input type="text" name="username" ng-model="username" placeholder=" Username" autocomplete="off" required
+        <input type="text" name="username" ng-model="user.username" placeholder=" Username" autocomplete="off" required
         ng-focus='signupForm.username.hasFocus=true', ng-blur='signupForm.username.hasFocus=false' autofocus>
         <p ng-show="signupForm.username.$error.required && (signupForm.username.$touched || submitted)"  class="error-block">Username is required!</p>
-      </div>
+      </div> -->
       <br>
 
       <!-- Email -->
@@ -20,7 +38,7 @@
       "has-success": signupForm.email.$valid,
       "has-error": signupForm.email.$invalid && (signupForm.$submitted || signupForm.email.$touched),
       "is-empty": !signupForm.email.$viewValue }'>
-        <input type="email" name="email" ng-model="email" placeholder=" example@example.com" autocomplete="off" required
+        <input type="email" name="email" ng-model="user.email" placeholder=" Email" autocomplete="off" required
         ng-focus='signupForm.email.hasFocus=true', ng-blur='signupForm.email.hasFocus=false'>
         <p ng-show="signupForm.email.$error.required && (signupForm.email.$touched || submitted)"  class="error-block">Your email is required!</p>
         <p ng-show="signupForm.email.$error.email && (signupForm.email.$touched || submitted)"  class="error-block">Valid email is required!</p>
@@ -33,26 +51,25 @@
       "has-success": signupForm.password.$valid,
       "has-error": signupForm.password.$invalid && (signupForm.$submitted || signupForm.password.$touched),
       "is-empty": !signupForm.password.$viewValue }'>
-        <input type="password" name="password" ng-model="password" placeholder=" Password" required
+        <input type="password" name="password" ng-model="user.password" placeholder=" Password" required
         ng-focus='signupForm.password.hasFocus=true', ng-blur='signupForm.password.hasFocus=false'>
-        <p ng-show="signupForm.password.$error.required && (signupForm.password.$touched || submitted)"  class="error-block">Password is required!</p>
+        <p ng-show="signupForm.password.$error.required && (signupForm.password.$touched || submitted)"  class="error-block">Your password is required!</p>
       </div>
       <br>
 
       <!-- Password validation -->
-      <div class="form-group"
+      <!-- <div class="form-group"
       ng-class='{ "has-focus": signupForm.confirmPassword.hasFocus,
       "has-success": signupForm.confirmPassword.$valid,
       "has-error": signupForm.confirmPassword.$invalid && (signupForm.$submitted || signupForm.confirmPassword.$touched),
       "is-empty": !signupForm.confirmPassword.$viewValue }'>
-        <input type="password" name="confirmPassword" ng-model="confirmPassword" placeholder=" Confirm Password" required
+        <input type="password" name="confirmPassword" ng-model="user.confirmPassword" placeholder=" Confirm Password" required
         ng-focus='signupForm.confirmPassword.hasFocus=true', ng-blur='signupForm.confirmPassword.hasFocus=false' repeat-password="password">
-        <!-- <p ng-show="signupForm.confirmPassword.$error.required && (signupForm.confirmPassword.$touched || submitted)"  class="error-block">You must confirm password!</p> -->
         <div ng-if="signupForm.confirmPassword.$dirty"
              ng-messages="signupForm.confirmPassword.$error">
           <p class="error-block" ng-message="repeat">Passwords do not match.</p>
         </div>
-      </div>
+      </div> -->
       <!-- <br> -->
 
       <button class="btn btn-lg btn-awesome" ng-disabled="signupForm.$invalid" type="submit">Sign up &#187;</button>

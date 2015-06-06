@@ -27,14 +27,15 @@
     <div class="site-wrapper-inner">
       <div class="cover-container">
 
-        <div class="masthead clearfix" ng-controller="MastheadCtrl">
+        <div class="masthead clearfix" ng-controller="AuthCtrl">
           <div class="inner">
             <h3 class="masthead-brand"><a href="/">Y . S . I . S</a></h3>
             <nav>
               <ul class="nav masthead-nav">
                 <li ng-class="{ active: isActive('/about')}"><a href="#/about">About</a></li>
                 <li ng-class="{ active: isActive('/reviews')}"><a href="#/reviews">Browse</a></li>
-                <li ng-class="{ active: isActive('/signin') || isActive('/signup')}"><a href="#/signin">Dashboard</a></li>
+                <li ng-hide="currentUser" ng-class="{ active: isActive('/signin') || isActive('/signup')}"><a href="#/signup" >Sign up</a></li>
+                <li ng-show="currentUser"><a href="" ng-click="signout()">Sign out</a></li>
               </ul>
             </nav>
           </div>
@@ -47,20 +48,22 @@
   </div>
 
     <script src="public/js/vendor/angular.js"></script>
-    <script src="public/js/vendor/angular-strap.js"></script>
-    <script src="public/js/vendor/angular-strap.tpl.js"></script>
-    <script src="public/js/vendor/angular-messages.js"></script>
-    <script src="public/js/vendor/angular-resource.js"></script>
     <script src="public/js/vendor/angular-route.js"></script>
-    <script src="public/js/vendor/angular-cookies.js"></script>
+
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
+    <!-- AngularFire Library -->
+    <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
+    <!-- FirebaseSimpleLogin -->
+    <script src='https://cdn.firebase.com/js/simple-login/1.4.1/firebase-simple-login.js'></script>
+
     <script src="public/app.js"></script>
-    <script src="public/controllers/masthead.js"></script>
+    <!-- <script src="public/controllers/masthead.js"></script> -->
     <script src="public/controllers/home.js"></script>
     <!-- <script src="public/controllers/add.js"></script> -->
-    <script src="public/directives/repeatPassword.js"></script>
-    <script src="public/controllers/signup.js"></script>
-    <script src="public/controllers/signin.js"></script>
-    <script src="public/services/auth.js"></script>
+
+    <script src="public/services/services.js"></script>
+    <script src="public/controllers/auth.js"></script>
     <script src="public/controllers/reviews.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

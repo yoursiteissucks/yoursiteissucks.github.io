@@ -1,4 +1,4 @@
-angular.module('MyApp', ['ngCookies', 'ngResource', 'ngMessages', 'ngRoute', 'mgcrea.ngStrap'])
+angular.module('MyApp', ['ngRoute', 'firebase', 'MyApp.services'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
@@ -19,11 +19,11 @@ angular.module('MyApp', ['ngCookies', 'ngResource', 'ngMessages', 'ngRoute', 'mg
       })
       .when('/signin', {
         templateUrl: 'public/views/signin.html',
-        controller: 'SigninCtrl'
+        controller: 'AuthCtrl'
       })
       .when('/signup', {
         templateUrl: 'public/views/signup.html',
-        controller: 'SignupCtrl'
+        controller: 'AuthCtrl'
       })
       .when('/add', {
         templateUrl: 'public/views/add.html',
