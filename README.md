@@ -1,6 +1,8 @@
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://nixsiow.com)
 
 # You Site Is Sucks.
+
+[![Join the chat at https://gitter.im/yoursiteissucks/yoursiteissucks.github.io](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yoursiteissucks/yoursiteissucks.github.io?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Ever come across a really sucks website, poorly designed, slow loading time, etc...
 Tell everybody how bad it is on http://yoursiteissucks.github.io !
 
