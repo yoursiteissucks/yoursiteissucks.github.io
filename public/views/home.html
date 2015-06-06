@@ -1,17 +1,17 @@
 
-<h7 class="lead">Hey <span ng-show="addForm.$dirty">{{websiteInput}} ,</span></h7>
+<h7 class="lead">Hey <span ng-show="addForm.$dirty">{{review.websiteInput}} ,</span></h7>
 <h1 class="cover-heading">YOUR SITE IS <span id="brandChange">SUCKS</span>.</h1>
 <h2 class="lead">And here is why __________.</h2>
 <form ng-submit='add()' name="addForm" novalidate>
   <div class="form-group">
-    <input type="url" name="websiteInput" ng-model="websiteInput" placeholder=" http://suckssite.com" autocomplete="off" required autofocus ng-focus="setCursor()">
+    <input type="url" name="websiteInput" ng-model="review.websiteInput" placeholder=" http://suckssite.com" autocomplete="off" required autofocus ng-focus="setCursor()">
     <p ng-show="addForm.websiteInput.$error.required && (addForm.websiteInput.$touched || submitted)"  class="error-block">URL with <strong>http://</strong> is required!</p>
   </div>
   <div class="form-group">
-    <textarea type="text" rows="3" name="commentInput" ng-model="commentInput" placeholder=" What's so sucks?" autocomplete="off" ng-maxlength="300" maxlength="300" minlength="10" required></textarea>
-    <p ng-show="addForm.commentInput.$dirty">{{300 - addForm.commentInput.$viewValue.length}} chars remaining</p>
-    <p ng-show="addForm.commentInput.$error.required && (addForm.commentInput.$touched || submitted)"  class="error-block">Your complain is required!</p>
-    <p ng-show="addForm.commentInput.$error.minlength && (addForm.commentInput.$touched || submitted)"  class="error-block">Minimum 10 characters. Complain more!</p>
+    <textarea type="text" rows="3" name="complainInput" ng-model="review.complainInput" placeholder=" What's so sucks?" autocomplete="off" ng-maxlength="300" maxlength="300" minlength="10" required></textarea>
+    <p ng-show="addForm.complainInput.$dirty">{{300 - addForm.complainInput.$viewValue.length}} chars remaining</p>
+    <p ng-show="addForm.complainInput.$error.required && (addForm.complainInput.$touched || submitted)"  class="error-block">Your complain is required!</p>
+    <p ng-show="addForm.complainInput.$error.minlength && (addForm.complainInput.$touched || submitted)"  class="error-block">Minimum 10 characters. Complain more!</p>
   </div>
     <button class="btn btn-lg btn-awesome btn-outline" ng-disabled="addForm.$invalid" type="submit">Tell Everybody &#187;</button>
 </form>
@@ -23,7 +23,7 @@
 <div class="mastfoot">
   <div class="inner">
     <p class="pull-right">
-      <a href="http://twitter.com/intent/tweet?status=Your Site Is Sucks!+http://yoursiteissucks.github.io" target="_blank">
+      <a href="http://twitter.com/intent/tweet?status=Your Site Is Sucks!+http://yoursiteissucks.github.io/ via @ysis_app" target="_blank">
         <i class="fa fa-twitter"></i>
       </a> &nbsp;
       <a href="http://www.facebook.com/sharer/sharer.php?u=http://yoursiteissucks.github.io&title=Your Site Is SUCKS!" target="_blank">

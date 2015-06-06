@@ -29,22 +29,43 @@ angular.module('MyApp.services', [])
     };
     return partyServiceObject;
   })
-  .factory('textMessageService', function(dataService, partyService) {
-    var textMessages = dataService.$child('textMessages');
-    var textMessageServiceObject = {
-      sendTextMessage: function(party, userId) {
-        var newTextMessage = {
-          phoneNumber: party.phone,
-          size: party.size,
-          name: party.name
+  .factory('addReviewService', function(dataService, $location) {
+    var reviews = dataService.$child('reviews');
+    var addReviewServiceObject = {
+      addReview: function(review) {
+        var newReview = {
+          websiteInput: review.websiteInput,
+          complainInput: review.complainInput,
+          upvote: review.upvote,
+          reviewDate: Date.now()
         };
-        textMessages.$add(newTextMessage);
-        partyService.getPartiesByUserId(userId).$child(party.$id).$update({notified: 'Yes'});
+        reviews.$add(newReview).then(function(data) {
+          console.log(data);
+          $location.path('/reviews');
+        });
+      },
+      deleteReview: function(review) {
+
       }
     };
-
-    return textMessageServiceObject;
+    return addReviewServiceObject;
   })
+  // .factory('textMessageService', function(dataService, partyService) {
+  //   var textMessages = dataService.$child('textMessages');
+  //   var textMessageServiceObject = {
+  //     sendTextMessage: function(party, userId) {
+  //       var newTextMessage = {
+  //         phoneNumber: party.phone,
+  //         size: party.size,
+  //         name: party.name
+  //       };
+  //       textMessages.$add(newTextMessage);
+  //       partyService.getPartiesByUserId(userId).$child(party.$id).$update({notified: 'Yes'});
+  //     }
+  //   };
+  //
+  //   return textMessageServiceObject;
+  // })
   .factory('authService', function($firebaseSimpleLogin, $location, $rootScope, FIREBASE_URL, dataService) {
     var authRef = new Firebase(FIREBASE_URL);
     var auth = $firebaseSimpleLogin(authRef);

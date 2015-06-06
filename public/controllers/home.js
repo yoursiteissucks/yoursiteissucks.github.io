@@ -1,10 +1,10 @@
 angular.module('MyApp')
-  .controller('HomeCtrl', ['$scope', function($scope) {
+  .controller('HomeCtrl', ['$scope', 'addReviewService', function($scope, addReviewService) {
     // jQuery to manually focus input if html5 autofocus tag not working properly
     var websiteInput = $('input[name="websiteInput"]');
     websiteInput.focus();
 
-    $scope.websiteInput = 'http://';
+    // $scope.websiteInput = 'http://';
 
     // change brand name by timer
     var brandArray = ['SHIT', 'SLOW', 'SUCKS'];
@@ -37,5 +37,13 @@ angular.module('MyApp')
     $scope.setCursor = function() {
       websiteInput.setCursorPosition(7); // set cursor position
     }
+
+
+    $scope.review = {websiteInput: 'http://', complainInput: '', upvote: 0};
+
+    $scope.add = function() {
+      addReviewService.addReview($scope.review);
+    };
+
 
   }]);
