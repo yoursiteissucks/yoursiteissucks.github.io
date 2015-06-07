@@ -38,6 +38,11 @@ a:hover {
   background-color: #fff;
   border: 1px solid #fff;
 }
+.btn-vote {
+  background-color: transparent;
+  border: 2px solid transparent;
+  outline: 0;
+}
 
 /*
  * Base structure

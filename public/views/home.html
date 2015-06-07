@@ -4,7 +4,7 @@
 <h2 class="lead">And here is why __________.</h2>
 <form ng-submit='add()' name="addForm" novalidate>
   <div class="form-group">
-    <input type="url" name="websiteInput" ng-model="review.websiteInput" placeholder=" http://suckssite.com" autocomplete="off" required autofocus ng-focus="setCursor()">
+    <input type="url" name="websiteInput" ng-model="review.websiteInput" placeholder=" http://suckssite.com" autocomplete="off" required ng-focus="setCursor()" id="websiteInput">
     <p ng-show="addForm.websiteInput.$error.required && (addForm.websiteInput.$touched || submitted)"  class="error-block">URL with <strong>http://</strong> is required!</p>
   </div>
   <div class="form-group">
