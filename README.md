@@ -15,7 +15,7 @@ Tell everybody how bad it is on http://yoursiteissucks.github.io !
 * Home - Complain about bad sites
 * About - Information about the author and the code license
 * Browse - All the reviews from other complainer
-* Signup - user Signin page or Signup page
+* More - user Signin page or Signup page
 
 #### To Do:
 - [x] Make reviews page come true
