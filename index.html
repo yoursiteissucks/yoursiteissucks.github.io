@@ -28,18 +28,22 @@
       <!--[if lt IE 7]>
           <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
+  <div class="alert alert-info lead" role="alert" id="topAlert" ng-controller="NavCtrl" ng-class="{ showAlert: isPage('/reviews') }">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <p><strong>Alert!</strong> Upvote is not working yet, but soon!</p>
+  </div>
   <div class=site-wrapper>
     <div class="site-wrapper-inner">
       <div class="cover-container">
 
-        <div class="masthead clearfix" ng-controller="AuthCtrl">
+        <div class="masthead clearfix" ng-controller="NavCtrl">
           <div class="inner">
             <h4 class="masthead-brand"><a href="#/">Y . S . I . S</a></h4>
             <nav>
               <ul class="nav masthead-nav">
                 <li ng-class="{ active: isActive('/about')}"><a href="#/about">About</a></li>
                 <li ng-class="{ active: isActive('/reviews')}"><a href="#/reviews">Browse</a></li>
-                <li ng-hide="currentUser" ng-class="{ active: isActive('/signin') || isActive('/signup')}"><a href="#/signup" >Sign up</a></li>
+                <li ng-hide="currentUser" ng-class="{ active: isActive('/signin') || isActive('/signup')}"><a href="#/signup" >More</a></li>
                 <li ng-show="currentUser"><a href="" ng-click="signout()">Sign out</a></li>
               </ul>
             </nav>
@@ -69,6 +73,7 @@
     <script src="public/controllers/home.js"></script>
     <script src="public/services/services.js"></script>
     <script src="public/controllers/auth.js"></script>
+    <script src="public/controllers/nav.js"></script>
     <script src="public/controllers/reviews.js"></script>
     <script src="public/filters/filter.js"></script>
 

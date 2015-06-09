@@ -2,6 +2,23 @@
  * Globals
  */
 
+/* overwrite default alert info from bootstrap */
+.alert-info {
+  display: none;
+  color: #fff;
+  background-color: #333;
+  margin-bottom:0;
+  border: 1px solid transparent;
+  border-bottom-color: #fff;
+}
+.alert-info>button {
+  color: #fff;
+  opacity: 0.8;
+}
+.showAlert {
+  display: block;
+}
+
 /* Links */
 a,
 a:focus,

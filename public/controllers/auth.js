@@ -1,9 +1,5 @@
 angular.module('MyApp')
-  .controller('AuthCtrl', [ '$scope', 'authService', '$location', function($scope, authService, $location) {
-    // Check nav bar links if current path then add "active" class
-    $scope.isActive = function (viewLocation) {
-      return viewLocation === $location.path();
-    };
+  .controller('AuthCtrl', [ '$scope', 'authService', function($scope, authService) {
 
     // Object bound to inputs on the signup and signin pages.
     $scope.user = {email: '', password: ''};
@@ -19,6 +15,5 @@ angular.module('MyApp')
     $scope.signout = function() {
       authService.signout();
     };
-
 
   }]);
