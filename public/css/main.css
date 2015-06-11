@@ -309,12 +309,13 @@ hr.style {
 
 /* Fancy blinking cursor */
 .blinking-cursor {
- /* -webkit-animation: 1s blink step-end infinite; */
+ -webkit-animation: 1s blink step-end infinite;
  -moz-animation: 1s blink step-end infinite;
  -ms-animation: 1s blink step-end infinite;
  -o-animation: 1s blink step-end infinite;
  animation: 1s blink step-end infinite;
  border-bottom: 1px solid white;
+ padding-bottom: 2px;
 }
 
 @keyframes "blink" {
