@@ -22,7 +22,9 @@ angular.module('MyApp')
     // // Autofocus and set the cursor at the right place.
     // // jQuery to manually focus input if html5 autofocus tag not working properly
     var websiteInput = $('input[name="websiteInput"]');
-    // websiteInput.focus();
+    $scope.focus =function() {
+      websiteInput.focus();
+    }
     //
     // jQuery set cursor on certain position on input box
     $.fn.setCursorPosition = function (pos) {
