@@ -1,6 +1,60 @@
 /*
  * Globals
  */
+ /* Fancy blinking cursor */
+ .blinking-cursor {
+  /* -webkit-animation: 1s blink step-end infinite; */
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+  border-bottom: 1px solid white;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #fff;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #fff;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #fff;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #fff;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #fff;
+  }
+}
 
 /* overwrite default alert info from bootstrap */
 .alert-info {
@@ -204,40 +258,6 @@ textarea {
   color: rgba(255,255,255,.5);
 }
 
-
-/*
- * Affix and center
- */
-
-/* @media (min-width: 768px) {
-  Pull out the header and footer
-  .masthead {
-    position: fixed;
-    top: 0;
-  }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
-  Start the vertical centering
-  .site-wrapper-inner {
-    vertical-align: middle;
-  }
-  Handle the widths
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 100%; Must be percentage or pixels for horizontal alignment
-  }
-} */
-
-/* @media (min-width: 992px) {
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 700px;
-  }
-} */
 
 #carbonads-container {display:none} h1[id] {padding-top:0px; margin-top:20px} .zero-clipboard {display:none !important} .bs-old-docs {display:none} .bs-social {display:none} .bs-sidebar {display:none !important} .col-md-9[role=main] {width:100% !important} .navbar-fixed-top {position:absolute !important}
 

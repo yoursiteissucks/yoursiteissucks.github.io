@@ -1,7 +1,7 @@
 
 <h7 class="lead">Hey <span ng-show="addForm.$dirty">{{review.websiteInput}} ,</span></h7>
 <h2 class="cover-heading">YOUR SITE IS <span id="brandChange">SUCKS</span>.</h2>
-<h2 class="lead">And here is why __________.</h2>
+<h2 class="lead">And here is why <span class="blinking-cursor">| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>.</h2>
 <form ng-submit='add()' name="addForm" novalidate>
   <div class="form-group">
     <input type="url" name="websiteInput" ng-model="review.websiteInput" placeholder=" http://suckssite.com" autocomplete="off" required ng-focus="setCursor()" id="websiteInput">
