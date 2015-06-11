@@ -1,119 +1,6 @@
 /*
  * Globals
  */
- /* Fancy blinking cursor */
- .blinking-cursor {
-  /* -webkit-animation: 1s blink step-end infinite; */
-  -moz-animation: 1s blink step-end infinite;
-  -ms-animation: 1s blink step-end infinite;
-  -o-animation: 1s blink step-end infinite;
-  animation: 1s blink step-end infinite;
-  border-bottom: 1px solid white;
-}
-
-@keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: #fff;
-  }
-}
-
-@-moz-keyframes blink {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: #fff;
-  }
-}
-
-@-webkit-keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: #fff;
-  }
-}
-
-@-ms-keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: #fff;
-  }
-}
-
-@-o-keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: #fff;
-  }
-}
-
-/* overwrite default alert info from bootstrap */
-.alert-info {
-  display: none;
-  color: #fff;
-  background-color: #333;
-  margin-bottom:0;
-  border: 1px solid transparent;
-  border-bottom-color: #fff;
-}
-.alert-info>button {
-  color: #fff;
-  opacity: 0.8;
-}
-.showAlert {
-  display: block;
-}
-
-/* Links */
-a,
-a:focus,
-a:hover {
-  color: #fff;
-}
-
-/* Custom default button */
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritence from `body` */
-  background-color: #fff;
-  border: 1px solid #fff;
-}
-
-.btn-outline {
-  color: #ffffff;
-  background-color: transparent;
-  border-color: #ffffff;
-}
-
-.btn-awesome {
-  color: #ffffff;
-  background-color: transparent;
-  border-color: #ffffff;
-  width: 85%
-}
-.btn-awesome:hover,
-.btn-awesome:focus {
-  color: #333;
-  text-shadow: none;
-  background-color: #fff;
-  border: 1px solid #fff;
-}
-.btn-vote {
-  background-color: transparent;
-  border: 2px solid transparent;
-  outline: 0;
-}
 
 /*
  * Base structure
@@ -333,7 +220,7 @@ hr.style {
 /* Special link */
 .special_link {
   border-bottom: 2px solid transparent;
-  padding-bottom: 10px;
+  padding-bottom: 2px;
   border-bottom-color: #a9a9a9;
   border-bottom-color: rgba(255,255,255,.25);
 }
@@ -412,4 +299,124 @@ hr.style {
 .search-box:focus {
   outline: 0;
   opacity: 1;
+}
+
+/* Overwriting bootstrap collapse div css */
+.collapsing, .collapse.in {
+  margin: auto;
+  width: 80%;
+}
+
+/* Fancy blinking cursor */
+.blinking-cursor {
+ /* -webkit-animation: 1s blink step-end infinite; */
+ -moz-animation: 1s blink step-end infinite;
+ -ms-animation: 1s blink step-end infinite;
+ -o-animation: 1s blink step-end infinite;
+ animation: 1s blink step-end infinite;
+ border-bottom: 1px solid white;
+}
+
+@keyframes "blink" {
+ from, to {
+   color: transparent;
+ }
+ 50% {
+   color: #fff;
+ }
+}
+
+@-moz-keyframes blink {
+ from, to {
+   color: transparent;
+ }
+ 50% {
+   color: #fff;
+ }
+}
+
+@-webkit-keyframes "blink" {
+ from, to {
+   color: transparent;
+ }
+ 50% {
+   color: #fff;
+ }
+}
+
+@-ms-keyframes "blink" {
+ from, to {
+   color: transparent;
+ }
+ 50% {
+   color: #fff;
+ }
+}
+
+@-o-keyframes "blink" {
+ from, to {
+   color: transparent;
+ }
+ 50% {
+   color: #fff;
+ }
+}
+
+/* overwrite default alert info from bootstrap */
+.alert-info {
+ display: none;
+ color: #fff;
+ background-color: #333;
+ margin-bottom:0;
+ border: 1px solid transparent;
+ border-bottom-color: #fff;
+}
+.alert-info>button {
+ color: #fff;
+ opacity: 0.8;
+}
+.showAlert {
+ display: block;
+}
+
+/* Links */
+a,
+a:focus,
+a:hover {
+ color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+ color: #333;
+ text-shadow: none; /* Prevent inheritence from `body` */
+ background-color: #fff;
+ border: 1px solid #fff;
+}
+
+.btn-outline {
+ color: #ffffff;
+ background-color: transparent;
+ border-color: #ffffff;
+}
+
+.btn-awesome {
+ color: #ffffff;
+ background-color: transparent;
+ border-color: #ffffff;
+ width: 85%
+}
+.btn-awesome:hover,
+.btn-awesome:focus {
+ color: #333;
+ text-shadow: none;
+ background-color: #fff;
+ border: 1px solid #fff;
+}
+.btn-vote {
+ background-color: transparent;
+ border: 2px solid transparent;
+ outline: 0;
 }

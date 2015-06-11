@@ -2,6 +2,8 @@ angular.module('MyApp')
   .controller('ReviewsCtrl', ['$scope', 'reviewService', function($scope, reviewService) {
     $scope.reviews = reviewService.getReviews();
 
+    $scope.voted = false;
+
     //Check to see if the window is top if not then display button
     var toTopButton = $('#scrollToTop');
     var mobileToTopButton = $('#mobile-scrollToTop');

@@ -7,6 +7,8 @@ angular.module('MyApp')
     $scope.signup = function() {
       authService.signup($scope.user);
     };
+    // State of 'Why should I signup' button
+    $scope.state = false;
     // Method to signin a user using the authService.
     $scope.signin = function() {
       authService.signin($scope.user);

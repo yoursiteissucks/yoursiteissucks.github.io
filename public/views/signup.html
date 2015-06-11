@@ -1,18 +1,19 @@
 <div class="wrapper">
 
   <br>
-  <a class="btn btn-lg btn-awesome" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-    Why should I sign up?
+  <a ng-click="state = !state" class="btn btn-lg btn-awesome" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+    <i class="pull-left fa" ng-class="{ 'fa-angle-double-up': state, 'fa-angle-double-down': !state }"></i>Why should I sign up ?<i class="pull-right fa" ng-class="{ 'fa-angle-double-up': state, 'fa-angle-double-down': !state }"></i>
   </a>
   <div class="collapse" id="collapse1">
     <br>
     <div class="lead">
-      <p>Short answer is you shouldn't if you are here to just to complain. Head back to <a href="/" class="special_link">home page</a> and express your unsatisfactory experience.</p>
-      <p>Feel lazy or wordless? No problem, go <a href="#/reviews" class="special_link">BROWSE</a> and see what people say about those bad sites.</p>
-      <i>Stay anonymous, no signup required!</i>
+      <p>You shouldn't have to if you're here to just to <i>COMPLAIN</i>. Head back to <a href="/" class="special_link">Home Page</a> and tell the world.</p>
+      <p><a href="#/reviews" class="special_link">BROWSE</a> to see what others say about those bad sites.</p>
+      <i>< Stay anonymous, no signup required! ></i>
       <hr class="style">
-      <p>If you are <i>webmaster</i> or <i>website owner</i> and you would like to get notify whenever unhappy customers complain about your website, sign up now! We'll sum it up and deliver to your mailbox!</p>
-      <p>(This function is still developing, but feel free to signup if you like. Cheers!)</p>
+      <p><i>Webmaster</i> or <i>Website Owner</i>, <br>get notify whenever unhappy customers comment about your website.</p>
+      <p>Sign up now! We'll sum it up and deliver to your mailbox!</p>
+      <i>(This function is still developing, but feel free to signup if you like. Cheers!)</i>
 
     </div>
   </div>
