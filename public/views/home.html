@@ -3,14 +3,16 @@
 <h2 class="lead">And here is why <span class="blinking-cursor" ng-click="focus()">| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>.</h2>
 <form ng-submit='add()' name="addForm" novalidate>
   <div class="form-group">
-    <input type="url" name="websiteInput" ng-model="review.websiteInput" placeholder=" http://suckssite.com" autocomplete="off" required ng-focus="setCursor()" id="websiteInput">
-    <p ng-show="addForm.websiteInput.$error.required && (addForm.websiteInput.$touched || submitted)"  class="error-block">URL with <strong>http://</strong> is required!</p>
-  </div>
-  <div class="form-group">
-    <textarea type="text" rows="3" name="complainInput" ng-model="review.complainInput" placeholder=" What's so sucks?" autocomplete="off" ng-maxlength="300" maxlength="300" minlength="10" required></textarea>
-    <p ng-show="addForm.complainInput.$dirty">{{300 - addForm.complainInput.$viewValue.length}} chars remaining</p>
+    <textarea type="text" rows="3" name="complainInput" ng-model="review.complainInput" placeholder=" What's sucks?" autocomplete="off" ng-maxlength="300" maxlength="300" minlength="10" required ng-class='{ "has-error": addForm.complainInput.$invalid && (addForm.$submitted || addForm.complainInput.$touched) }' ng-focus='addForm.complainInput.hasFocus=true' ng-blur='addForm.complainInput.hasFocus=false'></textarea>
+    <p ng-show="addForm.complainInput.$dirty && addForm.complainInput.hasFocus">{{300 - addForm.complainInput.$viewValue.length}} chars remaining</p>
     <p ng-show="addForm.complainInput.$error.required && (addForm.complainInput.$touched || submitted)"  class="error-block">Your complain is required!</p>
-    <p ng-show="addForm.complainInput.$error.minlength && (addForm.complainInput.$touched || submitted)"  class="error-block">Minimum 10 characters. Complain more!</p>
+    <p ng-show="addForm.complainInput.$error.minlength && (addForm.complainInput.$touched || submitted)"  class="error-block">Minimum 10 chars. Complain more!</p>
+  </div>
+
+  <div class="form-group">
+    <input type="url" name="websiteInput" ng-model="review.websiteInput" placeholder=" http://sucks.com" autocomplete="off" required ng-focus="setCursor()" id="websiteInput" ng-class='{ "has-error": addForm.websiteInput.$invalid && (addForm.$submitted || addForm.websiteInput.$touched) }'>
+    <p ng-show="addForm.websiteInput.$error.required && (addForm.websiteInput.$touched || submitted)"  class="error-block">Web address is required!</p>
+    <p ng-show="addForm.websiteInput.$invalid && (addForm.websiteInput.$touched || submitted)"  class="error-block"><i>http://</i> prefix is required!</p>
   </div>
     <button class="btn btn-lg btn-awesome btn-outline" ng-disabled="addForm.$invalid" type="submit">Tell Everybody &#187;</button>
 </form>

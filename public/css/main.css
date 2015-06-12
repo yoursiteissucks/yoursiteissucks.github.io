@@ -135,6 +135,9 @@ textarea {
   outline: 0;
 }
 
+.has-error {
+  border-bottom-color: #ff9494;
+}
 
 /*
  * Footer
