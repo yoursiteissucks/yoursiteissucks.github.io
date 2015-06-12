@@ -1,4 +1,4 @@
-<h5 class="lead">Hey <span style="border-bottom: 1px solid white" ng-show="addForm.$dirty">{{review.websiteInput}}</span></h5>
+<h5 class="lead">Hey <span style="border-bottom: 1px solid white" ng-show="addForm.websiteInput.$dirty">{{review.websiteInput}}</span></h5>
 <h2 class="cover-heading">YOUR SITE IS <span id="brandChange">SUCKS</span>.</h2>
 <h2 class="lead">And here is why <span class="blinking-cursor" ng-click="focus()">| &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span>.</h2>
 <form ng-submit='add()' name="addForm" novalidate>
@@ -12,7 +12,7 @@
   <div class="form-group">
     <input type="url" name="websiteInput" ng-model="review.websiteInput" placeholder=" http://sucks.com" autocomplete="off" required ng-focus="setCursor()" id="websiteInput" ng-class='{ "has-error": addForm.websiteInput.$invalid && (addForm.$submitted || addForm.websiteInput.$touched) }'>
     <p ng-show="addForm.websiteInput.$error.required && (addForm.websiteInput.$touched || submitted)"  class="error-block">Web address is required!</p>
-    <p ng-show="addForm.websiteInput.$invalid && (addForm.websiteInput.$touched || submitted)"  class="error-block"><i>http://</i> prefix is required!</p>
+    <p ng-show="addForm.websiteInput.$invalid && (addForm.websiteInput.$touched || submitted)"  class="error-block">URL with <i>http://</i> prefix is required!</p>
   </div>
     <button class="btn btn-lg btn-awesome btn-outline" ng-disabled="addForm.$invalid" type="submit">Tell Everybody &#187;</button>
 </form>
