@@ -221,13 +221,13 @@ hr.style {
 }
 
 /* Special link */
-.special_link {
+.fancy-link {
   border-bottom: 2px solid transparent;
   padding-bottom: 2px;
   border-bottom-color: #a9a9a9;
   border-bottom-color: rgba(255,255,255,.25);
 }
-.special_link:hover {
+.fancy-link:hover {
   text-decoration: none;
   outline: 0;
 }
@@ -423,4 +423,8 @@ a:hover {
  background-color: transparent;
  border: 2px solid transparent;
  outline: 0;
+}
+
+.faq-content {
+  text-align: left;
 }

@@ -25,6 +25,10 @@ angular.module('MyApp', ['ngRoute', 'firebase', 'MyApp.services', 'MyApp.filters
         templateUrl: 'public/views/signup.html',
         controller: 'AuthCtrl'
       })
+      .when('/faq', {
+        templateUrl: 'public/views/faq.html',
+        controller: ''
+      })
       .otherwise({
         redirectTo: '/'
       });
