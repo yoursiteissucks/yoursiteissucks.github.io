@@ -38,6 +38,13 @@ angular.module('MyApp.services', [])
       },
       getReviews: function() {
         return reviews;
+      },
+      getCurrentReview: function(review) {
+        return reviews.$child(review.$id);
+      },
+      addUpvote: function(review, currentUpvote) {
+        var newUpvote = currentUpvote + 1;
+        addReviewServiceObject.getCurrentReview(review).$update({upvote: newUpvote});
       }
     };
     return addReviewServiceObject;

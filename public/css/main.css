@@ -111,10 +111,10 @@ textarea {
 .cover {
   padding: 0 20px;
 }
-.cover .btn-lg {
+/* .cover .btn-lg {
   padding: 10px 20px;
   font-weight: bold;
-}
+} */
 
 .form-group input[type='text'], input[type='url'], .form-group input[type='email'], .form-group input[type='password'], .form-group textarea {
   position: relative;
@@ -412,12 +412,32 @@ a:hover {
  border-color: #ffffff;
  width: 85%
 }
+.btn-sort,
+.btn-sort:hover,
+.btn-sort:focus {
+  margin: 15px 5px;
+  color: #ffffff;
+  background-color: transparent;
+  border-color: #ffffff;
+  width: 45%;
+  padding: auto;
+  opacity: 0.3;
+}
+.btn-sort.focus {
+  color: #333;
+  text-shadow: none;
+  background-color: #fff;
+  border: 1px solid #fff;
+  outline: 0;
+  opacity: 1;
+}
 .btn-awesome:hover,
 .btn-awesome:focus {
  color: #333;
  text-shadow: none;
  background-color: #fff;
  border: 1px solid #fff;
+ outline: 0;
 }
 .btn-vote {
  background-color: transparent;
@@ -426,5 +446,6 @@ a:hover {
 }
 
 .faq-content {
+  padding: 15px;
   text-align: left;
 }

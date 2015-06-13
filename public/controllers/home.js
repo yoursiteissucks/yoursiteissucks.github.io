@@ -1,8 +1,6 @@
 angular.module('MyApp')
   .controller('HomeCtrl', ['$scope', 'reviewService', function($scope, reviewService) {
-    // if (!$scope.addForm.complainInput.$submitted) {
-    //   console.log('work');
-    // }
+
     $scope.$on('$locationChangeStart', function( event ) {
       if ( !$scope.addForm.$submitted && ( $scope.addForm.complainInput.$viewValue || $scope.addForm.websiteInput.$touched) ) {
         var answer = confirm("Are you sure you want to leave this page?")
@@ -11,11 +9,6 @@ angular.module('MyApp')
         }
       }
     });
-    // window.onbeforeunload = confirmExit;
-    // function confirmExit()
-    // {
-    //   return "You have attempted to leave this page.  If you have made any changes to the fields without clicking the Save button, your changes will be lost.  Are you sure you want to exit this page?";
-    // }
 
     $scope.review = {websiteInput: 'http://', complainInput: '', upvote: 0};
 

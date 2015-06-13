@@ -2,6 +2,15 @@ angular.module('MyApp')
   .controller('ReviewsCtrl', ['$scope', 'reviewService', function($scope, reviewService) {
     $scope.reviews = reviewService.getReviews();
 
+    $scope.addUpvote = function(review, currentUpvote) {
+      reviewService.addUpvote(review, currentUpvote);
+    };
+
+    $scope.predicate = 'reviewDate';
+    $scope.order = function(predicate) {
+      $scope.predicate = predicate;
+    };
+
     $scope.voted = false;
 
     //Check to see if the window is top if not then display button

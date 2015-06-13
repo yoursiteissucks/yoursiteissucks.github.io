@@ -15,4 +15,17 @@ angular.module('MyApp.filters', []).
       });
       return result;
     }
-  });
+  })
+  .filter('advancefilter', ['$filter', function($filter){
+    return function(data, text) {
+      if ( $('input[type=search]').val() !== "" ) {
+        var textArr = text.split(' ');
+        angular.forEach(textArr, function(test){
+          if(test){
+            data = $filter('filter')(data, test);
+          }
+        });
+      }
+      return data;
+    }
+}]);
