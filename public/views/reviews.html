@@ -13,22 +13,33 @@
     <h3 class="lead">{{ review.complainInput }}</h3>
   </div>
 
-  <div class="social-share">
-    <li><a href="http://twitter.com/intent/tweet?status=Your Site Is Sucks!+http://yoursiteissucks.github.io/ via @ysis_app" target="_blank"><i class="fa fa-twitter"></i></a></li>
-    <li><a href="https://plus.google.com/share?url=http://yoursiteissucks.github.io" target="_blank"><i class="fa fa-google-plus"></i></a></li>
-    <li><a href="http://www.tumblr.com/share?v=3&u=http://yoursiteissucks.github.io&t=Your Site Is Sucks!" target="_blank"><i class="fa fa-tumblr"></i></a></li>
-    <li><a href="http://www.facebook.com/sharer/sharer.php?u=http://yoursiteissucks.github.io&title=Your Site Is SUCKS!" target="_blank"><i class="fa fa-facebook"></i></a></li>
+  <div class="card-content--functions">
+
+    <div class="card-share pull-left">
+      <button ng-show="!expand" class="btn-share" ng-click="expand = true">
+        <i class="fa fa-share"></i>
+      </button>
+      <button ng-show="expand" class="btn-share" ng-click="expand = false">
+        <i class="fa fa-minus"></i>
+      </button>
+    </div>
+
+    <li><a ng-show="expand" href="http://twitter.com/intent/tweet?status=Your Site Is Sucks!+http://yoursiteissucks.github.io/#reviews/ via @ysis_app" target="_blank"><i class="fa fa-twitter"></i></a></li>
+    <li><a ng-show="expand" href="https://plus.google.com/share?url=http://yoursiteissucks.github.io/#reviews" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+    <li><a ng-show="expand" href="http://www.tumblr.com/share?v=3&u=http://yoursiteissucks.github.io/#reviews&t=Your Site Is Sucks!" target="_blank"><i class="fa fa-tumblr"></i></a></li>
+    <li><a ng-show="expand" href="http://www.facebook.com/sharer/sharer.php?u=http://yoursiteissucks.github.io/#reviews&title=Your Site Is Sucks!" target="_blank"><i class="fa fa-facebook"></i></a></li>
 
     <div class="card-upvote pull-right">
       <button class="btn-vote" ng-click="addUpvote(review, review.upvote)"><i class="fa fa-chevron-up"> {{ review.upvote }}</i></button>
     </div>
+
   </div>
 </div>
 
 <!-- Fall back for unfound result on search or fail to fetch from db -->
 <div class="card-content" ng-if="filteredReviews.length == 0">
   <br>
-  <h2> No result found for now. </h2>
+  <h2> No result found for now. <i class="fa fa-refresh fa-spin"></i></h2>
 </div>
 
 <br>

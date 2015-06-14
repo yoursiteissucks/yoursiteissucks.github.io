@@ -241,7 +241,7 @@ hr.style {
 
 /* reviews page */
 .card {
-  width: 100%;
+  width: 98%;
   border: 1px solid #fff;
   padding: 8px 20px;
   border-radius: 10px;
@@ -250,10 +250,13 @@ hr.style {
 }
 @media (min-width: 700px) {
   .card {
-    opacity: 0.5;
+    -webkit-transition: width 0.1s ease;
+    -moz-transition: width 0.1s ease;
+    -o-transition: width 0.1s ease;
+    transition: width 0.1s ease;
   }
   .card:hover {
-    opacity: 1;
+    width: 99%;
   }
 }
 
@@ -267,19 +270,20 @@ hr.style {
   }
 }
 
-.social-share {
+.card-content--functions {
   width: 99%;
   display: inline-block;
 }
 
-.card-upvote {
+.card-upvote,
+.card-share {
   font-size: 20px;
 }
 
-.social-share li {
+.card-content--functions li {
   list-style: none;
   display: inline-block;
-  margin: 5px 15px;
+  margin: 0px 15px;
   font-size: 20px;
 }
 
@@ -439,7 +443,8 @@ a:hover {
  border: 1px solid #fff;
  outline: 0;
 }
-.btn-vote {
+.btn-vote,
+.btn-share {
  background-color: transparent;
  border: 2px solid transparent;
  outline: 0;

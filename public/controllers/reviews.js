@@ -11,6 +11,8 @@ angular.module('MyApp')
       $scope.predicate = predicate;
     };
 
+    $scope.expand = false;
+
     $scope.voted = false;
 
     //Check to see if the window is top if not then display button

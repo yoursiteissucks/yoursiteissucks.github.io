@@ -4,6 +4,9 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" ng-app="MyApp"> <!--<![endif]-->
     <head>
+      <!-- Enable HTML5 History API in AngularJS -->
+      <!-- allow us to have clean URLs without the # symbol -->
+      <base href="/">
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <title>You Site Is Sucks</title>
@@ -28,53 +31,51 @@
       <!--[if lt IE 7]>
           <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
-  <div class="alert alert-info" role="alert" id="topAlert" ng-controller="NavCtrl" ng-class="{ showAlert: isPage('/reviews') }">
-    <button type="button" class="close" data-dismiss="alert">×</button>
-    <p class="lead">Social sharing feature still developing!</p>
-  </div>
-  <div class=site-wrapper>
-    <div class="site-wrapper-inner">
-      <div class="cover-container">
+    <div class="alert alert-info" role="alert" id="topAlert" ng-controller="NavCtrl" ng-class="{ showAlert: isPage('/reviews') }">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <p class="lead">Social sharing feature still developing!</p>
+    </div>
+    <div class=site-wrapper>
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
 
-        <div class="masthead clearfix" ng-controller="NavCtrl">
-          <div class="inner">
-            <h4 class="masthead-brand"><a href="#/">Y . S . I . S</a></h4>
-            <nav>
-              <ul class="nav masthead-nav">
-                <li ng-class="{ active: isActive('/about')}"><a href="#/about">About</a></li>
-                <li ng-class="{ active: isActive('/reviews')}"><a href="#/reviews">Browse</a></li>
-                <li ng-class="{ active: isActive('/faq')}"><a href="#/faq">FAQ</a></li>
-                <li ng-hide="currentUser" ng-class="{ active: isActive('/signin') || isActive('/signup')}"><a href="#/signup" >More</a></li>
-                <li ng-show="currentUser"><a href="" ng-click="signout()">Sign out</a></li>
-              </ul>
-            </nav>
+          <div class="masthead clearfix" ng-controller="NavCtrl">
+            <div class="inner">
+              <h4 class="masthead-brand"><a href="/">Y . S . I . S</a></h4>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li ng-class="{ active: isActive('/about')}"><a href="/about">About</a></li>
+                  <li ng-class="{ active: isActive('/reviews')}"><a href="/reviews">Browse</a></li>
+                  <li ng-class="{ active: isActive('/faq')}"><a href="/faq">FAQ</a></li>
+                  <li ng-hide="currentUser" ng-class="{ active: isActive('/signin') || isActive('/signup')}"><a href="/signup" >More</a></li>
+                  <li ng-show="currentUser"><a href="" ng-click="signout()">Sign out</a></li>
+                </ul>
+              </nav>
+            </div>
           </div>
+
+          <div class="inner cover" ng-view></div>
+
+          <!-- Fallback/first loading up text for user -->
+          <div style="margin:100px auto;opacity: 0.6;text-align:center;" ng-if="">
+            <h1>Loading up ... </h1>
+            <br>
+            <h6>Click <a class="fancy-link" href="http://yoursiteissucks.github.io">Refresh</a> if it take too long.</h6>
+          </div>
+
         </div>
-
-        <div class="inner cover" ng-view></div>
-
       </div>
     </div>
-  </div>
 
-    <!--
-    <script src="public/js/vendor/angular.min.js"></script>
-    <script src="public/js/vendor/angular-route.min.js"></script>
-    -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <script>window.angular || document.write('<script src="public/js/vendor/angular.min.js"><\/script>');</script>
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
     <script>(function(){try {window.angular.module('ngRoute');} catch(e) {return false;} return true;})()||document.write('<script src="public/js/vendor/angular-route.min.js"><\/script>');</script>
-<!-- 
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
-    <script>(function(){try {window.angular.module('ngAnimate');} catch(e) {return false;} return true;})()||document.write('<script src="public/js/vendor/angular-animate.min.js"></script>');</script>
- -->
+
     <!-- Firebase -->
     <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
-    <!-- AngularFire Library -->
     <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
-    <!-- FirebaseSimpleLogin -->
     <script src='https://cdn.firebase.com/js/simple-login/1.4.1/firebase-simple-login.js'></script>
 
     <script src="public/app.js"></script>
