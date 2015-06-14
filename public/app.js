@@ -1,10 +1,5 @@
 angular.module('MyApp', ['ngRoute', 'firebase', 'MyApp.services', 'MyApp.filters'])
-  .config(['$locationProvider','$routeProvider', function($locationProvider, $routeProvider) {
-    // $locationProvider is a built-in AngularJS service for
-    // configuring apps linking paths.
-    // Using this service you can enable HTML5 pushState or change URL prefix from # to something like #!
-    $locationProvider.html5Mode(true);
-
+  .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'public/views/home.html',

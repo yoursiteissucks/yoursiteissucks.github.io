@@ -4,9 +4,6 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" ng-app="MyApp"> <!--<![endif]-->
     <head>
-      <!-- Enable HTML5 History API in AngularJS -->
-      <!-- allow us to have clean URLs without the # symbol -->
-      <base href="/">
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <title>You Site Is Sucks</title>
@@ -41,13 +38,13 @@
 
           <div class="masthead clearfix" ng-controller="NavCtrl">
             <div class="inner">
-              <h4 class="masthead-brand"><a href="/">Y . S . I . S</a></h4>
+              <h4 class="masthead-brand"><a href="#/">Y . S . I . S</a></h4>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li ng-class="{ active: isActive('/about')}"><a href="/about">About</a></li>
-                  <li ng-class="{ active: isActive('/reviews')}"><a href="/reviews">Browse</a></li>
-                  <li ng-class="{ active: isActive('/faq')}"><a href="/faq">FAQ</a></li>
-                  <li ng-hide="currentUser" ng-class="{ active: isActive('/signin') || isActive('/signup')}"><a href="/signup" >More</a></li>
+                  <li ng-class="{ active: isActive('/about')}"><a href="#/about">About</a></li>
+                  <li ng-class="{ active: isActive('/reviews')}"><a href="#/reviews">Browse</a></li>
+                  <li ng-class="{ active: isActive('/faq')}"><a href="#/faq">FAQ</a></li>
+                  <li ng-hide="currentUser" ng-class="{ active: isActive('/signin') || isActive('/signup')}"><a href="#/signup" >More</a></li>
                   <li ng-show="currentUser"><a href="" ng-click="signout()">Sign out</a></li>
                 </ul>
               </nav>
